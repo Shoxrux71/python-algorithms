@@ -1,0 +1,135 @@
+1. abs()
+Tavsifi: Bu funksiya sonning modulini (ya'ni, musbat qiymatini) qaytaradi.
+
+print(abs(-5))  # 5
+Izoh: abs(-5) funksiyasi -5 sonining modulini qaytaradi, ya'ni uning musbat qiymatini: 5.
+
+2. all()
+Tavsifi: Ro‘yxat yoki boshqa iteratsiya qilinadigan obyektning barcha elementlari True bo‘lsa, True qaytaradi, aks holda False.
+
+print(all([True, True, True]))  # True
+print(all([True, False, True]))  # False
+Izoh: Agar ro‘yxatdagi barcha qiymatlar True bo‘lsa, all() True qaytaradi.
+
+3. any()
+Tavsifi: Agar ro‘yxat yoki iteratsiyadagi kamida bitta element True bo‘lsa, True qaytaradi.
+
+print(any([False, False, True]))  # True
+print(any([False, False, False]))  # False
+Izoh: Agar ro‘yxatda hech bo‘lmaganda bitta True element bo‘lsa, any() True qaytaradi.
+
+4. bin()
+Tavsifi: Sonni ikkilik (binary) ko‘rinishda qaytaradi.
+
+print(bin(10))  # '0b1010'
+Izoh: bin(10) funksiyasi 10 sonini ikkilik (binary) ko‘rinishida qaytaradi: '0b1010'.
+
+5. bool()
+Tavsifi: Argumentni boolean (True yoki False) turiga o‘zgartiradi.
+
+print(bool(0))  # False
+print(bool(1))  # True
+Izoh: bool(0) False, bool(1) esa True qaytaradi.
+
+6. bytearray()
+Tavsifi: ByteArray obyektini yaratadi. Bu, o‘zgaruvchan baytli ma'lumotlar bilan ishlash imkonini beradi.
+
+print(bytearray([65, 66, 67]))  # bytearray(b'ABC')
+Izoh: Bu kodda bytearray([65, 66, 67]) baytli ma'lumotlarni yaratadi, ularni ASCII kodlari sifatida ko‘rsatadi.
+
+7. bytes()
+Tavsifi: Bytes obyektini yaratadi. Bu o‘zgarmas baytli ma'lumotlar bilan ishlash imkonini beradi.
+
+print(bytes([65, 66, 67]))  # b'ABC'
+Izoh: bytes([65, 66, 67]) baytli ma'lumotlarni yaratadi va ularni o‘zgarmas qilib saqlaydi.
+
+8. callable()
+Tavsifi: Funksiya yoki obyekt chaqirilishi mumkinligini tekshiradi.
+
+print(callable(print))  # True
+print(callable(5))  # False
+Izoh: callable(print) True qaytaradi, chunki print funksiyasi chaqirilishi mumkin. callable(5) esa False qaytaradi, chunki 5 funksiya emas.
+
+9. chr()
+Tavsifi: Berilgan integerning ASCII belgisini qaytaradi.
+
+print(chr(65))  # 'A'
+Izoh: chr(65) 65 ASCII kodiga tegishli bo‘lgan belgi (ya'ni 'A') ni qaytaradi.
+
+10. complex()
+Tavsifi: Kompleks son yaratadi.
+
+print(complex(2, 3))  # (2+3j)
+Izoh: complex(2, 3) funksiyasi 2 + 3j shaklidagi kompleks sonni yaratadi.
+
+11. dict()
+Tavsifi: Yangi dictionary (lug‘at) yaratadi.
+
+print(dict(a=1, b=2))  # {'a': 1, 'b': 2}
+Izoh: dict(a=1, b=2) yangi lug‘at obyektini yaratadi.
+
+12. divmod()
+Tavsifi: Ikki sonni bo‘lib, bo‘linmaning va qoldiqqa bo‘linishini qaytaradi.
+
+print(divmod(10, 3))  # (3, 1)
+Izoh: divmod(10, 3) 10 ni 3 ga bo‘lganda, bo‘linmaning natijasi 3 va qoldiq 1 bo‘ladi.
+
+13. eval()
+Tavsifi: Berilgan ifodani Python kodi sifatida baholaydi va natijasini qaytaradi.
+
+print(eval('2 + 3'))  # 5
+Izoh: eval('2 + 3') ifodasini baholaydi va uning natijasini qaytaradi: 5.
+
+14. exec()
+Tavsifi: Berilgan kodni Python kodi sifatida bajaradi.
+
+exec('x = 5')
+print(x)  # 5
+Izoh: exec('x = 5') kodi x o‘zgaruvchisini yaratadi va unga 5 qiymatini beradi.
+
+15. filter()
+Tavsifi: Ro‘yxatdagi elementlarni berilgan funktsiya yordamida filter (filtr) qiladi.
+
+def is_even(num):
+    return num % 2 == 0
+
+print(list(filter(is_even, [1, 2, 3, 4, 5])))  # [2, 4]
+Izoh: filter(is_even, [1, 2, 3, 4, 5]) faqat toq bo‘lmagan sonlarni chiqaradi (ya'ni, 2 va 4).
+
+16. float()
+Tavsifi: Sonni float (o‘nlik) turiga o‘zgartiradi.
+
+print(float(5))  # 5.0
+Izoh: float(5) butun sonni o‘nlik (float) turiga o‘zgartiradi: 5.0.
+
+17. format()
+Tavsifi: Belgilangan formatda qiymatni formatlaydi.
+
+name = "John"
+age = 30
+print("My name is {} and I am {} years old.".format(name, age))  # "My name is John and I am 30 years old."
+Izoh: format() orqali matnni kerakli formatda chiqarish mumkin.
+
+18. frozenset()
+Tavsifi: O‘zgarmas (immutable) to‘plam yaratadi.
+
+frozen = frozenset([1, 2, 3, 3])
+print(frozen)  # frozenset({1, 2, 3})
+Izoh: frozenset() o‘zgarmas to‘plam yaratadi, unda elementlarni o‘zgartirib bo‘lmaydi.
+
+19. getattr()
+Tavsifi: Ob'ekt atributini olish uchun ishlatiladi.
+
+class Person:
+    name = "John"
+
+p = Person()
+print(getattr(p, 'name'))  # John
+Izoh: getattr(p, 'name') ob'ekt pning name atributini qaytaradi.
+
+20. globals()
+Tavsifi: Global o‘zgaruvchilarni qaytaradi.
+
+x = 10
+print(globals())  # {'x': 10, ...}
+Izoh: globals() barcha global o‘zgaruvchilarni qaytaradi.
