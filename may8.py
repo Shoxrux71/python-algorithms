@@ -33,9 +33,18 @@ import math;
  #   print("your food have not been ordered");
 
 
-name = input("enter name: ");
-if name == "":
-    print("you have not entered a name");
-else:
-    print(f"your name is {name}");
+#name = input("enter name: ");
+#if name == "":
+ #   print("you have not entered a name");
+#else:
+ #   print(f"your name is {name}");
+#https://www.youtube.com/watch?v=ix9cRaBkVe0&t=2875s
 #    print("your name is not entered");
+
+
+youtube = input("want you wathc your video? (yes/no): ");
+link = "https://www.youtube.com/watch?v=ix9cRaBkVe0&t=2875s";
+if youtube == "yes":
+    print(f"your link here: {link}");
+else:
+    print("than slepp baby");
